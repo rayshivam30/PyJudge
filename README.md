@@ -157,13 +157,13 @@ pytest.ini
 
 ```mermaid
 flowchart LR
-    Auth[Auth APIs\n/signup /login /refresh] --> Token[JWT Access Token]
-    Token --> Problems[Problem APIs\n/problems /problem/{id}]
-    Token --> Run[Run API\n/run sample tests]
-    Token --> Submit[Submit API\n/submit hidden tests]
-    Submit --> History[Submission APIs\n/submission/{id} /history]
-    Submit --> Board[Leaderboard\n/leaderboard]
-    Admin[Admin JWT] --> Manage[Admin APIs\n/problem /testcases /dashboard /ban]
+    Auth["Auth APIs\n/signup /login /refresh"] --> Token[JWT Access Token]
+    Token --> Problems["Problem APIs\n/problems /problem/{id}"]
+    Token --> Run["Run API\n/run sample tests"]
+    Token --> Submit["Submit API\n/submit hidden tests"]
+    Submit --> History["Submission APIs\n/submission/{id} /history"]
+    Submit --> Board["Leaderboard\n/leaderboard"]
+    Admin[Admin JWT] --> Manage["Admin APIs\n/problem /testcases /dashboard /ban"]
 ```
 
 Typical candidate flow: sign up or log in, browse problems, fetch samples, run code against public tests, submit for hidden tests, then poll submission history or leaderboard. Typical admin flow: log in with admin privileges, create problems, add public and hidden tests, monitor dashboard counts, and ban abusive users.

@@ -118,7 +118,7 @@ erDiagram
     }
 
     LEADERBOARD {
-        int user_id PK FK
+        int user_id PK, FK
         int problems_solved
         int score
         int total_submissions
